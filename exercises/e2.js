@@ -1,11 +1,19 @@
 import { data } from "../data/data";
+// import {d} from "vitest/dist/index-5aad25c1";
 
 // SPACE DATA EXERCISE 2
 // Return an array of all Asteroids' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-  // Your code goes here...
+  const asteroids = data.asteroids;
+
+  const asteroidNames = [];
+  //  I just couldn't make myself copy and paste 44 lines of code
+  for (const asteroid of asteroids) {
+  asteroidNames.push(asteroid.name);
+  }
+  return asteroidNames;
 }
 
 

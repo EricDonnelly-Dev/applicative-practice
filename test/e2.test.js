@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it  } from "vitest";
 import { getAsteroidNames } from "../exercises/e2";
 import { data } from "../data/data";
 

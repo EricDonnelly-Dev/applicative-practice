@@ -1,3 +1,4 @@
+
 import { data } from "../data/data";
 
 // SPACE DATA SAMPLE EXERCISE 0

@@ -1,3 +1,5 @@
+
+
 import { data } from "../data/data";
 
 // SPACE DATA EXERCISE 8
@@ -5,8 +7,12 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
-}
+  const planets = data.planets;
+ const foundPlanet = planets.find(moon=> moon.moons.includes(moonName));
+
+  return  foundPlanet.name;
+  }
+
 
 
 

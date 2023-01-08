@@ -5,10 +5,18 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsWithLowGravity(data) {
-  // Your code goes here...
+    const planets = data.planets;
+    const lowGravPlanets = planets.filter((v)=>{
+        return  v.gravity < 10
+    })
+    let lowGravPlanetNames =[];
+    lowGravPlanetNames.push(lowGravPlanets[0].name);
+    lowGravPlanetNames.push(lowGravPlanets[1].name);
+    lowGravPlanetNames.push(lowGravPlanets[2].name);
+    lowGravPlanetNames.push(lowGravPlanets[3].name);
+    lowGravPlanetNames.push(lowGravPlanets[4].name);
+    return lowGravPlanetNames;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
