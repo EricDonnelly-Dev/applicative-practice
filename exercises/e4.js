@@ -9,13 +9,8 @@ export function getPlanetsWithLowGravity(data) {
     const lowGravPlanets = planets.filter((v)=>{
         return  v.gravity < 10
     })
-    let lowGravPlanetNames =[];
-    lowGravPlanetNames.push(lowGravPlanets[0].name);
-    lowGravPlanetNames.push(lowGravPlanets[1].name);
-    lowGravPlanetNames.push(lowGravPlanets[2].name);
-    lowGravPlanetNames.push(lowGravPlanets[3].name);
-    lowGravPlanetNames.push(lowGravPlanets[4].name);
-    return lowGravPlanetNames;
+
+    return lowGravPlanets.map(function (planet){return planet.name});
 }
 
 // === TEST YOURSELF ===
