@@ -5,9 +5,9 @@ import { data } from "../data/data";
 // Return example: 132.53
 
 export function getAveragePlanetsTemperature(data) {
-        let planetGrossTemp= data.planets.reduce(function (a,cV){
-            return a +cV.avgTemp
-        },0);
+        let planetGrossTemp= data.planets.reduce(function (acc, planet){
+            return acc+planet.avgTemp
+        }, 0);
         return planetGrossTemp/ data.planets.length
 }
 

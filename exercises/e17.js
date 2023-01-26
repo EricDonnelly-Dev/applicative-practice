@@ -1,29 +1,21 @@
 export function minBy(array, cb) {
-    let minVal=99999999;
-    let returnVal;
+    if(array.length === 0 || !array){return undefined;}
+    let minVal=array[0];
     for (const arrayElement of array) {
-         if(cb(arrayElement)<minVal){
-             minVal = cb(arrayElement);
-             returnVal = arrayElement;
+         if(cb(arrayElement)<cb(minVal)){
+             minVal = arrayElement;
          }
     }
-    if(array.length === 0 || !array){
-        returnVal= undefined;
-    }
-    return returnVal;
+    return minVal
 }
 
 export function maxBy(array, cb) {
-    let maxVal=0;
-    let returnVal;
+    if(array.length === 0 || !array){return undefined;}
+    let maxVal=array[0];
     for (const arrayElement of array) {
-        if(cb(arrayElement)>maxVal){
-            maxVal = cb(arrayElement);
-            returnVal = arrayElement;
+        if(cb(arrayElement)>cb(maxVal)){
+            maxVal = arrayElement;
         }
     }
-    if(array.length === 0 || !array){
-        returnVal= undefined;
-    }
-    return returnVal;
+    return maxVal;
 }
