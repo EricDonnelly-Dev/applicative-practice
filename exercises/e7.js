@@ -5,15 +5,10 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsNamesWithMoons(data) {
-    const planets=data.planets;
-    const planetNames=[];
-    const planetsWithMoons = planets.filter((pWm)=>{
+    return data.planets.filter((pWm)=>{
         return pWm.moonsCount > 0;
-    })
-for (const planet of planetsWithMoons) {
-    planetNames.push(planet.name)
-}
-    return planetNames;
+    }).map((planet) =>{return planet.name});
+
 }
 
 

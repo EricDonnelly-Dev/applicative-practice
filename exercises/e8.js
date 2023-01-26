@@ -7,10 +7,9 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  const planets = data.planets;
- const foundPlanet = planets.find(moon=> moon.moons.includes(moonName));
+  return data.planets.find(moon=> moon.moons.includes(moonName)).name;
 
-  return  foundPlanet.name;
+
   }
 
 
